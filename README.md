@@ -11,6 +11,9 @@
   - output 不写默认 dist 文件夹 输出 main.js 文件
     - path path 必须是绝对路径
     - publicPath 替换的是 html 中的 script 标签和 link 标签的地址，实际是因为 script 标签不一定是相对路径，通常 js css 等静态文件都放在 cdn 上，url 比如"http://www.cdn.com/assets/"
+    - filename 将所有 js 文件输出为一个 js 文件
+    - chunkFilename import()动态导入会产生 chunk 文件 chunk 文件名默认是[id].[output-filename].js
+    - [id]在 filename 中 webpack 可以使用的变量
   - plugins 是个数组
     - HtmlWebpackPlugin template 选项 接收绝对路径的 path
   - module

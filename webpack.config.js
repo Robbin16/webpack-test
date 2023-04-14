@@ -8,6 +8,8 @@ module.exports = {
   },
   output: {
     path: path.resolve(__dirname, "./build"),
+    filename: "app.js",
+    //chunkFilename: "asset_[id].js",
   },
   plugins: [
     new HtmlWebpackPlugin({
