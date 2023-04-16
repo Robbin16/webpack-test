@@ -16,7 +16,11 @@
     - [id]在 filename 中 webpack 可以使用的变量
   - plugins 是个数组
     - HtmlWebpackPlugin template 选项 接收绝对路径的 path
+    - MiniCssExtractPlugin filename 指定分离 css 文件的名称 chunkFilename 在动态导入 js 中引入的 css 文件 需要在 chunkFilename 中命名
   - module
     - rules 选项本质就是 loader rules 里 use 选项是个数组里面要用到的 loader 都写在里面
     - loader 也是需要安装的 style-loader css-loader
     - style-loader 增加 html 的 style 标签，css-loader 是把 css 转化成 js
+    - scss 处理需要 sass-loader 以及安装 sass 要在 js 文件中引入"style.scss" loader 顺序["style-loader","css-loader","sass-loader"]
+    - mini-css-extract-plugin.loader 与 style-loader 功能相反，能单独分离 css 文件。顺序为[MiniCssExtractPlugin.loader,"css-loader","sass-loader"]
+    - 常用 loader babel-loader ts-loader style-loader css-loader sass-loader MiniCssExtractPlugin.loader
