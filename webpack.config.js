@@ -14,7 +14,13 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
+      title: "hello webpack",
+      filename: "app.html",
       template: path.resolve(__dirname, "./src/index.html"),
+      publicPath: "http://www.cdn.com/",
+      templateParameters: {
+        title: "hello title",
+      },
     }),
     new MiniCssExtractPlugin({
       filename: "style.css",

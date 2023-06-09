@@ -16,6 +16,9 @@
     - [id]在 filename 中 webpack 可以使用的变量
   - plugins 是个数组
     - HtmlWebpackPlugin template 选项 接收绝对路径的 path
+      - title 需要在 html 中用 ejs 模板语法引用 <%= htmlWebpackPlugin.options.title %>
+      - filename 指定输出的 html 文件名
+      - templateParameters 中自定义 titleName 属性 在 html 中用 ejs 模板语法引用 <%= titleName %>
     - MiniCssExtractPlugin filename 指定分离 css 文件的名称 chunkFilename 在动态导入 js 中引入的 css 文件 需要在 chunkFilename 中命名
   - module
     - rules 选项本质就是 loader rules 里 use 选项是个数组里面要用到的 loader 都写在里面
